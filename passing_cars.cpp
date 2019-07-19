@@ -3,7 +3,7 @@
 
 using namespace std;
 
-vector<int> prefixSums(vector<int> A)
+vector<int> prefixSums(vector<int> &A)
 {
 	vector<int> x(A.size() + 1, 0);
 
@@ -18,7 +18,7 @@ vector<int> prefixSums(vector<int> A)
 
 }
 
-int countTotal(vector<int>A, int startIdx, int endIdx)
+int countTotal(vector<int>&A, int startIdx, int endIdx)
 {
 	// A: prefix sums array of an array.
 	return (A.at(endIdx + 1) - A.at(startIdx));
